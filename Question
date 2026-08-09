@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int t = Integer.parseInt(in.nextLine());
+
+        while (t-- > 0) {
+            String[] parts = in.nextLine().split(" ");
+
+            try {
+                int a = Integer.parseInt(parts[0]);
+                int b = Integer.parseInt(parts[1]);
+
+                System.out.println(a / b);
+
+            } catch (ArithmeticException e) {
+                System.out.println("java.lang.ArithmeticException: " + e.getMessage());
+
+            } catch (NumberFormatException e) {
+                System.out.println("java.lang.NumberFormatException: " + e.getMessage());
+            }
+        }
+
+        in.close();
+    }
+}
